@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Linux</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="pagina1">
+    <header>
+      
+      <h1>Curso de Linux<ion-icon name="logo-tux"></ion-icon></h1>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html " class="nav-link px-2 text-white linkBtn">Início</a></li>
+          <li><a href="vanta.html" class="nav-link px-2 text-white linkBtn">Vantagens do Linux</a></li>
+          <li><a href="comando1.html" class="nav-link px-2 text-white linkBtn">Comandos pt.1</a></li>
+          <li><a href="comando2.html" class="nav-link px-2 text-white linkBtn">Comandos pt.2</a></li>
+          <li><a href="hospedagem.html" class="active">Hospedagem</a></li>
+          <li><a href="contato.html" class="nav-link px-2 text-white linkBtn">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Curso de Linux</h1>
+      <h1 style="text-align:center"> Hospedagem de Websites</h1>
+      <p>Uma das grandes vantagens do Linux é proporcionar um ambiente seguro, confiável e suficientemente estável para permitir a hospedagem de sites. A principal ferramenta é o servidor Apache, um software de codigo aberto e gratuito.</p>
+      <H2> Mas afinal, o que é o Apache?</H2>
+      <p>O Apache é um servidor web de código aberto e oferecido gratuitamente pela Apache Software Foundation (ASF), responsável por seu desenvolvimento e manutenção. Sua principal funcionalidade é disponibilizar conteúdos presentes na internet, como um site, por exemplo, por meio da comunicação entre um servidor e um navegador.</p>
+      <p>Para saber mais sobre o Apache, clique <strong><a href="apache.html" class="link-color">Aqui</a></strong>.</p>
+      <h2> Preparação do sistema</h2>
+      <p>Antes de mais nada, precisamos atualizar o Linux. Para isso, precisamos de permissão para acessar e modificar arquivos de sistema (root). Para tal, usaremos junto ao comando para atualização o comando 'sudo', que significa 'super user do' (ou 'superusuário faça'). Será necessario inserir a senha do usuario para liberar. Então, no terminal de comandos o primeiro comando que usaremos é: </p>
+      <center>
+      <img src="Imagens/update.jpg" width="180px"height="50px">
+      </center>
+      <p>Este comando lista todos os arquivos de atualizações disponiveis para o sistema Linux no momento.</p>
+      <p>Com arquivos listados, é hora de efetivamente atualizar o sistema com o comando:</p>
+      <center>
+      <img src="Imagens/upgrade.jpg" width="180px" height="50px">
+      </center>
+      <h2>Instalação do Apache</h2>
+      <p>Agora é a hora de instalar o Apache. Para isso, utilizaremos o seguinte comando:</p>
+      <center>
+      <img src="Imagens/installapache.jpg" width="500px"height="50px">
+      </center>
+      <p>A seguir, vamos verificar se de fato foi instalado e funcionante. O comando é:</p>
+      <center>
+      <img src="Imagens/statusapache.jpg" width="300px"height="50px">
+      </center>
+      <h2>A vez do Firewall</h2>
+      <p>O firewall é um dispositivo de uma rede de computadores, na forma de um programa ou de equipamento físico, que tem por objetivo aplicar uma política de segurança a um determinado ponto da rede. A ferramenta isola o computador da Internet enquanto inspeciona o pacote de dados. Em seguida, ele determina o que deve ser permitido passar ou ser bloqueado.</p>
+      <p>Agora precisamos instalar o firewall chamado de 'ufw', sigla para 'Uncomplicated FireWall'. O comando que deve ser escrito é:</p>
+      <center>
+      <img src="Imagens/installfire.jpg" width="200px" height="50px">
+      </center>
+      <p>Agora verificaremos se está tudo certo com o firewall:</p>
+      <center>
+        <img src="Imagens/statusfire.jpg" width="230px" height="50px">
+      </center>
+      <p>Por fim, é necessario realizar a liberação do Apache no firewall. Para tal, segue o comando:</p>
+      <center>
+        <img src="Imagens/apacheaceitafire.jpg" width="300px" height="50px">
+      </center>
+      <h2>Criando a pasta do novo website</h2>
+      <p>As pastas dos websites hospedados no seu sistema ficarão armazenadas no diretorio root > pasta var > pasta www. Neste diretorio, criaremos a pasta do website ficticio chamado 'galeto.com'. Os comandos que usaremos são:</p>
+      <center>
+        <img src="Imagens/pastasite.jpg" width="240px" height="70px">
+      </center>
+      <p>E por fim, entraremos na recem-criada pasta 'galeto.com' e lá dentro criaremos a pasta 'html', onde ficarão armazenados os arquivos de paginas do site:
+        <center>
+          <img src="Imagens/pastafinal.jpg" width="150px" height="60px">
+        </center>
+        <h2>A pagina index.html</h2>
+        <p>Primeiro, entraremos na pasta 'html' e a partir dai utilizaremos o editor de texto 'nano' para redigir a pagina inicial do site:</p>
+        <center>
+          <img src="Imagens/nano.jpg" width="230px" height="80px">
+        </center>
+        <p>Uma vez criada a pagina index.html, precisamos mudar a propriedade da pasta do website 'galeto.com' para o usuario e grupo www-data. Os comandos usados são os seguintes:</p>
+        <center>
+          <img src="Imagens/propriedade.jpg" width="400px"height="80px">
+        </center>
+        <h2>Criar configuração de host para o website</h2>
+        <p>Agora vamos configurar a hospedagem da pagina criada. Para isso sairemos da pasta atual e iremos para o seguinte diretorio 'sites-available' dentro do diretorio 'Apache2'. Neste diretorio, criaremos o arquivo de configuração do site 'galeto.com' com extensão '.conf'. Segue comandos:</p>
+        <center>
+          <img src="Imagens/conf.jpg" width="270px" height="80px">
+        </center>
+        Agora editaremos a pagina de configuração. Segue exemplo do que fizemos:</p>
+        <pre style="text-align:center">
+          virtualHost *:80
+            ServerAdmin admin@galeto.com
+            ServerName galeto.com
+            ServerAlias www.galeto.com
+
+            DocumentRoot /var/www/galeto.com/html/
+
+            ErrorLog ${APACHE_LOG_DIR}/error.log
+            CustomLog ${APACHE_LOG-DIR}/access.log combine
+            /virtualHost
+        </pre>
+        <p> Agora ligaremos o website a um endereço de IP. Para isso, voltaremos ao diretorio /etc e criaremos o arquivo host:</p>
+          <center>
+            <img src="Imagens/host.jpg" width="130px" height="70px">
+          </center>
+          <p>Neste arquivo, como exemplo, iremos confirgurar o IP da rede local, que sempre tem o endereço 127.0.0.1. Apenas adicionaremos as informações seguintes ao arquivo já existente:</p>
+          <pre>
+            127.0.0.1    galeto.com
+            127.0.0.1    www.galeto.com
+          </pre>
+        <h2> Habilitando o website</h2>
+        <p>Agora finalmente habilitaremos o website construido. De volta ao diretorio <i>/etc/apache2/sites-available</i>, entraremos com o seguinte comando:</p>
+        <center>
+          <img src="Imagens/habilita.jpg" width="240px" height="50px">
+        </center>
+        <p>Agora só precisamos reiniciar o servidor Apache:</p>
+        <center>
+          <img src="Imagens/reinicio.jpg" width="230px" height="50px">
+        </center>
+        <p><strong>E pronto!</strong> O website está configurado e efetivamente hospedado no servidor Apache!</p>
+
+      </main>
+      <footer>
+        <p>&copy; 2023 Curso de Linux. Feito por Alan Bezerra, Vytor Oliveira, Erik Kestring. Todos os direitos reservados.</p>
+      </footer>
+  </body>
+</html>

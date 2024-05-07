@@ -1,0 +1,141 @@
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(Imagens/fundo2.jpg);
+  background-size: cover;
+  color: #fff;
+}
+body.pagina1{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(Imagens/fundo2.jpg);
+  background-size:contain;
+  color: #fff;
+
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a.active {
+  background-color: #666;
+}
+
+main {
+  padding: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5%;
+}
+.menu {
+  width: 200px;
+}
+.menu-item a {
+  font-size: 18px; /* Tamanho da fonte desejado */
+  color: white; /* Cor do texto desejada */
+}
+
+.link-color{
+  color: red;
+}
+
+.main1{
+  text-align: center;
+  text-align: left;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+option {
+  padding: 10px;
+}
+/* Estilos do menu */
+ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.menu li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+ul.menu li:hover {
+  background-color: #ccc;
+}
+.video{
+  text-align: center;
+}
+footer1{
+  background-color: #666;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  width: 96.8%;
+  text-align: center;
+  font-size:16px;
+  padding:30px;
+}
+footer {
+  background-color: #666;
+
+  bottom: 0;
+  left: 0;
+  width: 96.8%;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}

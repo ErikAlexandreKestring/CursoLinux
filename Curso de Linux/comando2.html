@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Linux</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="pagina1">
+    <header>
+      
+      <h1>Curso de Linux<ion-icon name="logo-tux"></ion-icon></h1><br>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html " class="nav-link px-2 text-white linkBtn">Início</a></li>
+          <li><a href="vanta.html" class="nav-link px-2 text-white linkBtn">Vantagens do Linux</a></li>
+          <li><a href="comando1.html" class="nav-link px-2 text-white linkBtn">Comandos pt.1</a></li>
+          <li><a href="comando2.html" class="active">Comandos pt.2</a></li>
+          <li><a href="hospedagem.html" class="nav-link px-2 text-white linkBtn">Hospedagem</a></li>
+          <li><a href="contato.html" class="nav-link px-2 text-white linkBtn">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+      <main>
+        <section>
+          <h6>teste</h6><br>
+          <h1>Comandos Parte 2</h1><br>
+          <h1>Pacotes YUM Updater (Red Hat, Fedora e derivados)</h1><br>
+          <dt>yum install package_name</dt>
+          <dd><br>Baixa e instala um pacote rpm.</dd><br>
+          <dt>yum localinstall package_name.rpm</dt>
+          <dd><br>Irá instalar um RPM e vai tentar resolver todas as dependências para você, usando seus repositórios.</dd><br>
+          <dt>yum update package_name.rpm</dt>
+          <dd><br>Atualiza todos os pacotes rpm instalados no sistema.</dd><br>
+          <dt>yum update package_name</dt>
+          <dd><br>Upgrade / atualiza um pacote rpm.</dd><br>
+          <dt>yum remove package_name</dt>
+          <dd><br>Remove um pacote rpm.</dd><br>
+          <dt>yum list</dt>
+          <dd><br>Lista todos os pacotes instalados no sistema.</dd><br>
+          <dt>yum search package_name</dt>
+          <dd><br>Encontra um pacote no repositório rpm.</dd><br>
+          <dt>yum clean packages</dt>
+          <dd><br>Limpa um cache de rpm, apagando os pacotes baixados.</dd><br>
+          <dt>yum clean headers</dt>
+          <dd><br>Exclui todo o cabeçalho de arquivos que o sistema usa para resolver a dependência.</dd><br>
+          <dt>yum clean all</dt>
+          <dd><br>Remove os arquivos de cache e o cabeçalho do pacote.</dd><br>
+          <h1>Pacotes DEB (Debian, Ubuntu e derivados)</h1><br>
+          <dt>dpkg -i package.deb’</dt>
+          <dd><br>Instala / atualiza um pacote deb.</dd><br>
+          <dt>dpkg -r package_name</dt>
+          <dd><br>Remove um deb para o pacote do sistema.</dd><br>
+          <dt>dpkg -l</dt>
+          <dd><br>Exibe todos os pacotes deb instalados no sistema.</dd><br>
+          <dt>dpkg -l | grep httpd</dt>
+          <dd><br>Exibe todos os pacotes deb com o nome “httpd”</dd><br>
+          <dt>dpkg -s package_name</dt>
+          <dd><br>Informações sobre um pacote específico instalado no seu sistema.</dd><br>
+          <dt>dpkg -L package_name</dt>
+          <dd><br>Exibe lista de arquivos fornecidos por um pacote instalado no sistema.</dd><br>
+          <dt>dpkg –contents package.deb</dt>
+          <dd><br>Exibe uma lista de arquivos fornecidos por um pacote não instalado ainda.</dd><br>
+          <dt>dpkg -S /bin/ping</dt>
+          <dd><br>Verifica qual pacote pertence um determinado arquivo.</dd><br>
+          <h1>Atualizador de pacotes APT (Debian, Ubuntu e derivados)</h1><br>
+          <dt>apt-get install package_name</dt>
+          <dd><br>Instala / atualiza um pacote deb.</dd><br>
+          <dt>apt-cdrom install package_name</dt>
+          <dd><br>Instala / atualiza um pacote deb do cdrom.</dd><br>
+          <dt>apt-get update</dt>
+          <dd><br>Atualiza a lista de pacotes.</dd><br>
+          <dt>apt-get upgrade</dt>
+          <dd><br>Atualiza todos os pacotes instalados.</dd><br>
+          <dt>apt-get remove package_name</dt>
+          <dd><br>Remove a instalação de um pacote deb do sistema.</dd><br>
+          <dt>apt-get purge program_name</dt>
+          <dd><br>Remove a instalação de um programa do sistema.</dd><br>
+          <dt>apt-get check</dt>
+          <dd><br>Verifica se as resoluções das dependências estão corretas.</dd><br>
+          <dt>apt-get clean</dt>
+          <dd><br>Limpa o cache de pacotes baixados.</dd><br>
+          <dt>apt-cache search searched-package</dt>
+          <dd><br>Retorna a lista de pacotes que corresponde à série ‘pacotes’</dd><br>
+          <h1>Exibir o conteúdo de um arquivo</h1><br>
+          <dt>cat file1</dt>
+          <dd><br>Exibe o conteúdo de um arquivo a partir da primeira linha.</dd><br>
+          <dt>tac file1</dt>
+          <dd><br>Exibe o conteúdo de um arquivo a partir da última linha.</dd><br>
+          <dt>more file1</dt>
+          <dd><br>Exibe o conteúdo ao longo de um arquivo.</dd><br>
+          <dt>less file1</dt>
+          <dd><br>Semelhante o comando ‘more’ mas permite que você salve o arquivo, bem como o movimento para trás.</dd><br>
+          <dt>head -2 file1</dt>
+          <dd><br>Exibe as duas primeiras linhas de um arquivo.</dd><br>
+          <dt>tail -2 file1</dt>
+          <dd><br>Exibe as duas últimas linhas de um arquivo.</dd><br>
+          <dt>tail -f /var/log/messages</dt>
+          <dd><br>Exibe em tempo real o que foi adicionado ao arquivo.</dd><br>
+          <h1>Manipulação de texto</h1><br>
+          <dt>cat file1 file2 .. | command <> file1_in.txt_or_file1_out.txt</dt>
+          <dd><br>Sintaxe geral para a manipulação de texto usando o tubo, STDIN e STDOUT.</dd><br>
+          <dt>cat file1 | command( sed, grep, awk, grep, etc…) > result.txt</dt>
+          <dd><br>Sintaxe geral para manipular um texto de um arquivo e escrever os resultados para um novo arquivo.</dd><br>
+          <dt>cat file1 | command( sed, grep, awk, grep, etc…) » result.txt</dt>
+          <dd><br>Sintaxe geral para manipular um texto de um arquivo e adicionar o resultado em um arquivo existente.</dd><br>
+          <dt>grep Nov /var/log/messages</dt>
+          <dd><br>Procura as palavras “Nov” no arquivo ‘/ var/log/messages’.</dd><br>
+          <dt>grep ^Nov /var/log/messages</dt>
+          <dd><br>Procura palavras que começam com “Novembro” no arquivo ‘/ var/log/messages’</dd><br>
+          <dt>grep [0-9] /var/log/messages</dt>
+          <dd><br>Seleciona todas as linhas no arquivo ‘/ var/log/messages’ que contêm números.</dd><br>
+          <dt>grep Nov -R /var/log/*</dt>
+          <dd><br>Encontra a sequência de caracteres “Nov” no diretório ‘ / var/log ‘ e abaixo.</dd><br>
+          <dt>sed ‘s/stringa1/stringa2/g’ example.txt</dt>
+          <dd><br>Realoca “string1” com “string2” em Example.txt</dd><br>
+          <dt>sed ‘/^$/d’ example.txt</dt>
+          <dd><br>Remove todas as linhas em branco do example.txt</dd><br>
+          <dt>sed ‘/ *#/d; /^$/d’ example.txt</dt>
+          <dd><br>Exclui comentários e linhas em branco de Example.txt</dd><br>
+          <dt>sed -e ‘1d’ result.txt</dt>
+          <dd><br>Elimina a primeira linha do arquivo result.txt</dd><br>
+          <dt>sed -n ‘/string1/p’</dt>
+          <dd><br>Exibi somente as linhas que contêm a palavra “string1”.</dd><br>
+          <h1>Estabelecer o formato de conversão de arquivos</h1><br>
+          <dt>dos2unix filedos.txt fileunix.txt</dt>
+          <dd><br>Converte um formato de arquivo de texto do MSDOS para UNIX.</dd><br>
+          <dt>unix2dos fileunix.txt filedos.txt</dt>
+          <dd><br>Converte um formato de arquivo de texto do UNIX para MSDOS.</dd><br>
+          <dt>recode ..HTML < page.txt > page.html</dt>
+          <dd><br>Converte um arquivo de texto para html.</dd><br>
+          <dt>recode -l | more</dt>
+          <dd><br>Exibe todas as conversões de formato disponíveis.</dd><br>
+          <h1>Análise de sistemas de arquivos</h1><br>
+          <dt>badblocks -v /dev/hda1</dt>
+          <dd><br>Verifica os blocos defeituosos no disco hda1.</dd><br>
+          <dt>fsck /dev/hda1</dt>
+          <dd><br>Repara / verificar a integridade do arquivo do sistema Linux no disco hda1.</dd><br>
+          <dt>fsck.ext2 /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext2 no disco hda1.</dd><br>
+          <dt>e2fsck /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext2 no disco hda1.</dd><br>
+          <dt>e2fsck -j /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext3 no disco hda1.</dd><br>
+          <dt>fsck.ext3 /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext3 no disco hda1.</dd><br>
+          <dt>fsck.vfat /dev/hda1</dt>
+          <dd><br>Repara / verifica integridade do arquivo sistema disco fat hda1.</dd><br>
+          <dt>fsck.msdos /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade de um arquivo a partir do dos no sistema de disco hda1.</dd><br>
+          <dt>dosfsck /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade de um arquivo a partir do dos no sistema de disco hda1.</dd><br>
+          <h1>Formatar sistemas de arquivos</h1><br>
+          <dt>mkfs /dev/hda1</dt>
+          <dd><br>Verifica os blocos defeituosos no disco hda1.</dd><br>
+          <dt>mke2fs /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do arquivo do sistema Linux no disco hda1.</dd><br>
+          <dt>mke2fs -j /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext2 no disco hda1.</dd><br>
+          <dt>mkfs -t vfat 32 -F /dev/hda1</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext2 no disco hda1.</dd><br>
+          <dt>fdformat -n /dev/fd0</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext3 no disco hda1.</dd><br>
+          <dt>mkswap /dev/hda3</dt>
+          <dd><br>Repara / verifica a integridade do sistema de arquivo ext3 no disco hda1.</dd><br>
+          <h1>Backups</h1><br>
+          <dt>dump -0aj -f /tmp/home0.bak /home</dt>
+          <dd><br>Faz um backup completo e salva do diretório ‘/Home’.</dd><br>
+          <dt>dump -1aj -f /tmp/home0.bak /home</dt>
+          <dd><br>Faz um Backup incremental do diretório ‘ /home’.</dd><br>
+          <dt>restore -if /tmp/home0.bak</dt>
+          <dd><br>Restaura um save interativamente.</dd><br>
+          <dt>rsync -rogpav –delete /home /tmp</dt>
+          <dd><br>Sincronização entre diretórios.</dd><br>
+          <dt>rsync -rogpav -e ssh –delete /home ip_address</dt>
+          <dd><br>Rsync através do túnel SSH.</dd><br>
+          <dt>rsync -az -e ssh –delete ip_addr</dt>
+          <dd><br>Sincroniza um diretório local com um diretório remoto via ssh e compressão.</dd><br>
+          <dt>rsync -az -e ssh –delete /home/local ip_addr</dt>
+          <dd><br>Sincroniza um diretório remoto em um diretório local através de ssh e compressão.</dd><br>
+          <dt>dd bs=1M if=/dev/hda | gzip | ssh user@ip_addr ‘dd of=hda.gz’</dt>
+          <dd><br>Faz um backup em um disco rígido de um host remoto através de ssh.</dd><br>
+          <dt>dd if=/dev/sda of=/tmp/file1</dt>
+          <dd><br>Salva o conteúdo de um disco rígido para um arquivo. (Neste caso o disco rígido é “sda” e o arquivo
+          “file1”).</dd><br>
+          <dt>tar -Puf backup.tar /home/user</dt>
+          <dd><br>Salva os diretórios/etc e a raiz (excluindo o conteúdo do subdiretório/root/dir1 /) em um arquivo
+          compactado, cujo nome inclui a data e hora atual.</dd><br>
+          <dt>( cd /tmp/local/ && tar c . ) | ssh -C user@ip_addr ‘cd /home/share/ && tar x -p’</dt>
+          <dd><br>Copia o conteúdo de um diretório em um diretório remoto através de ssh.</dd><br>
+          <dt>( tar c /home ) | ssh -C user@ip_addr ‘cd /home/backup-home && tar x -p’</dt>
+          <dd><br>Copia um diretório local em um diretório remoto através de ssh.</dd><br>
+          <dt>tar cf – . | (cd /tmp/backup ; tar xf – )</dt>
+          <dd><br>Copia o local preservando as licenças e links de um diretório para outro.</dd><br>
+          <dt>find /home/user1 -name ‘*.txt’ | xargs cp -av –target-directory=/home/backup/ –parents</dt>
+          <dd><br>Encontra e copia todos os arquivos com extensão ‘.txt’ de um diretório para outro.</dd><br>
+          <dt>find /var/log -name ‘*.log’ | tar cv –files-from=- | bzip2 > log.tar.bz2</dt>
+          <dd><br>Encontra todos os arquivos com extensão ‘. log’ e fazer um arquivo bzip.</dd><br>
+          <dt>dd if=/dev/hda of=/dev/fd0 bs=512 count=1</dt>
+          <dd><br>Faz uma cópia do MRB (Master Boot Record) para um disquete.</dd><br>
+          <dt>dd if=/dev/fd0 of=/dev/hda bs=512 count=1</dt>
+          <dd><br>Restaura a cópia da (MBR Master Boot Record) gravada no disquete.</dd><br>
+          <h1>CD-ROM</h1><br>
+          <dt>cdrecord -v gracetime=2 dev=/dev/cdrom -eject blank=fast -force</dt>
+          <dd><br>Limpa ou apaga um cd regravável (CD-RW)</dd><br>
+          <dt>mkisofs /dev/cdrom > cd.iso</dt>
+          <dd><br>Cria uma imagem .iso do CD-ROM no disco.</dd><br>
+          <dt>mkisofs /dev/cdrom | gzip > cd_iso.gz</dt>
+          <dd><br>Cria uma imagem iso compactada do CD-ROM no disco.</dd><br>
+          <dt>mkisofs -J -allow-leading-dots -R -V “Label CD” -iso-level 4 -o ./cd.iso data_cd</dt>
+          <dd><br>Cria uma imagem .iso de um diretório.</dd><br>
+          <dt>cdrecord -v dev=/dev/cdrom cd.iso</dt>
+          <dd><br>Grava uma imagem iso.</dd><br>
+          <dt>gzip -dc cd_iso.gz | cdrecord dev=/dev/cdrom –</dt>
+          <dd><br>Grava uma imagem iso comprimida.</dd><br>
+          <dt>mount -o loop cd.iso /mnt/iso</dt>
+          <dd><br>Monta uma imagem iso.</dd><br>
+          <dt>cd-paranoia -B</dt>
+          <dd><br>Tira músicas de um cd para arquivos wav.</dd><br>
+          <dt>cd-paranoia – ”-3”</dt>
+          <dd><br>Pegua as 3 primeiras músicas de um cd para arquivos wav.</dd><br>
+          <dt>cdrecord –scanbus</dt>
+          <dd><br>Faz a varredura de buffer para identificar o canal scsi.</dd><br>
+          <dt>dd if=/dev/hdc | md5sum</dt>
+          <dd><br>Executa um md5sum em um dispositivo, como um CD.</dd><br>
+          <h1>Redes (LAN e Wi-Fi)</h1><br>
+          <dt>ifconfig eth0</dt>
+          <dd><br>Exibe a configuração de uma placa de rede Ethernet.</dd><br>
+          <dt>ifup eth0</dt>
+          <dd><br>Ativa uma interface ‘eth0’.</dd><br>
+          <dt>ifdown eth0</dt>
+          <dd><br>Desabilita uma interface ‘eth0’.</dd><br>
+          <dt>ifconfig eth0 192.168.0.1 netmask 255.255.255.0</dt>
+          <dd><br>Configura um endereço IP.</dd><br>
+          <dt>ifconfig eth0 promisc</dt>
+          <dd><br>Configura ‘eth0’ modo comum para obter pacotes (sniffing).</dd><br>
+          <dt>dhclient eth0</dt>
+          <dd><br>Ativa a interface ‘eth0’ em modo dhcp.</dd><br>
+          <dt>route -n</dt>
+          <dd><br>Exibe tabela de rota.</dd><br>
+          <dt>route add -net 0/0 gw IP_Gateway</dt>
+          <dd><br>Configura a entrada padrão.</dd><br>
+          <dt>route add -net 192.168.0.0 netmask 255.255.0.0 gw 192.168.1.1</dt>
+          <dd><br>Configura uma rota estática para encontrar a rede, ‘192.168.0.0/16’.</dd><br>
+          <dt>route del 0/0 gw IP_gateway</dt>
+          <dd><br>Remove a rota estática.</dd><br>
+          <dt>echo “1” > /proc/sys/net/ipv4/ip_forward</dt>
+          <dd><br>Ativa o IP de rota.</dd><br>
+          <dt>hostname</dt>
+          <dd><br>Exibe o nome do host do sistema.</dd><br>
+          <dt>host www.example.com</dt>
+          <dd><br>Encontra o nome do host para resolver o nome de um IP (1).</dd><br>
+          <dt>nslookup www.example.com</dt>
+          <dd><br>Encontra o nome do host para resolver o nome de um IP e vice-versa (2).</dd><br>
+          <dt>ip link show</dt>
+          <dd><br>Exibe o status de todas as interfaces.</dd><br>
+          <dt>mii-tool eth0</dt>
+          <dd><br>Exibe o status de ‘eth0’ link.</dd><br>
+          <dt>ethtool eth0</dt>
+          <dd><br>Exibe estatísticas da placa de rede ‘eth0’.</dd><br>
+          <dt>netstat -tup</dt>
+          <dd><br>Exibe todas as conexões de rede ativa e seu PID.</dd><br>
+          <dt>netstat -tupl</dt>
+          <dd><br>Exibe todos os ouvintes de rede de serviços sobre o sistema e seu PID.</dd><br>
+          <dt>tcpdump tcp port 80</dt>
+          <dd><br>Exibe todo o tráfego HTTP.</dd><br>
+          <dt>iwlist scan</dt>
+          <dd><br>Exibe as redes sem fio.</dd><br>
+          <dt>iwconfig eth1</dt>
+          <dd><br>Exibe a configuração de uma placa de rede sem fio.</dd><br>
+          <dt>whois www.example.com</dt>
+          <dd><br>Pesquisa Base de dados Whois.</dd><br>
+          <h1>Redes Microsoft Windows (SAMBA)</h1>
+          <dt>nbtscan ip_addr</dt>
+          <dd><br>Resolução de nome de rede da BIOS.</dd><br>
+          <dt>nmblookup -A ip_addr</dt>
+          <dd><br>Resolução de nome de rede da BIOS.</dd><br>
+          <dt>smbclient -L ip_addr/hostname</dt>
+          <dd><br>Visualiza compartilhamentos remotos de um host windows.</dd><br>
+          <h1>Firewall (iptables)</h1><br>
+          <dt>iptables -t filter -L</dt>
+          <dd><br>Exibe todas as correntes na tabela de filtro.</dd><br>
+          <dt>iptables -t nat -L</dt>
+          <dd><br>Exibe todas as correntes da tabela nat.</dd><br>
+          <dt>iptables -t filter -F</dt>
+          <dd><br>Limpa todas as regras da tabela de filtro.</dd><br>
+          <dt>iptables -t nat -F</dt>
+          <dd><br>Limpa todas as regras da tabela nat.</dd><br>
+          <dt>iptables -t filter -X</dt>
+          <dd><br>Exclui qualquer cadeia criados pelo usuário.</dd><br>
+          <dt>iptables -t filter -A INPUT -p tcp –dport telnet -j ACCEPT</dt>
+          <dd><br>Permite conexões telnet de entrar.</dd><br>
+          <dt>iptables -t filter -A OUTPUT -p tcp –dport http -j DROP</dt>
+          <dd><br>Bloqueia conexões HTTP de saída.</dd><br>
+          <dt>iptables -t filter -A FORWARD -p tcp –dport pop3 -j ACCEPT</dt>
+          <dd><br>Permite conexões POP para uma cadeia de frente.</dd><br>
+          <dt>iptables -t filter -A INPUT -j LOG –log-prefix “DROP INPUT”</dt>
+          <dd><br>Registra uma sequência de entrada.</dd><br>
+          <dt>iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE</dt>
+          <dd><br>Configura uma PAT (conversão de endereços de porta) na eth0, escondendo os pacotes de saída de
+          coação.</dd><br>
+          <h1>Monitoramento e depuração</h1><br>
+          <dt>top</dt>
+          <dd><br>Exibe as tarefas Linux que mais utilizam a CPU.</dd><br>
+          <dt>ps -eafw</dt>
+          <dd><br>Exibe as tarefas do Linux.</dd><br>
+          <dt>ps -e -o pid,args –forest</dt>
+          <dd><br>Exibe as tarefas do Linux de forma hierárquica.</dd><br>
+          <dt>pstree</dt>
+          <dd><br>Exibe uma árvore de processos do sistema.</dd><br>
+          <dt>kill -9 ID_Processo</dt>
+          <dd><br>Força o encerramento de um processo.</dd><br>
+          <dt>kill -1 ID_Processo</dt>
+          <dd><br>Força um processo para recarregar a configuração.</dd><br>
+          <dt>lsof -p $$</dt>
+          <dd><br>Exibe uma lista de arquivos abertos por processos.</dd><br>
+          <dt>lsof /home/user1</dt>
+          <dd><br>Exibe uma lista de arquivos abertos em um determinado caminho do sistema.</dd><br>
+          <dt>strace -c ls >/dev/null</dt>
+          <dd><br>Exibe o sistema de chamadas feitas e recebidas por um processo.</dd><br>
+          <dt>strace -f -e open ls >/dev/null</dt>
+          <dd><br>Visualiza chamadas para a biblioteca.</dd><br>
+          <dt>watch -n1 ‘cat /proc/interrupts’</dt>
+          <dd><br>Exibe interrupções em tempo real.</dd><br>
+          <dt>last reboot</dt>
+          <dd><br>Última reinicialização do sistema.</dd><br>
+          <dt>lsmod</dt>
+          <dd><br>Exibe o kernel carregado.</dd><br>
+          <dt>free -m</dt>
+          <dd><br>Exibe o status da RAM em megabytes.</dd><br>
+          <dt>smartctl -A /dev/hda</dt>
+          <dd><br>Monitora a confiabilidade de um disco rígido através do SMART.</dd><br>
+          <dt>smartctl -i /dev/hda</dt>
+          <dd><br>Verifica se o SMART está habilitado em um disco rígido.</dd><br>
+          <dt>tail /var/log/dmesg</dt>
+          <dd><br>Exibe os eventos inerentes no processo de carregamento do kernel.</dd><br>
+          <dt>tail /var/log/messages</dt>
+          <dd><br>Exibe eventos do sistema.</dd><br>
+          <h1>Dicas e comandos úteis</h1><br>
+
+          <dt>apropos …keyword</dt>
+          <dd><br>Exibe uma lista de comandos que pertencem às palavras-chave de um programa; são úteis quando você
+          sabe o que faz o seu programa, mas não conhece o nome do comando.</dd><br>
+          <dt>man ping</dt>
+          <dd><br>Exibe as páginas de manual on-line; por exemplo, um comando ping, use a opção ‘-k’ para encontrar
+          qualquer comando relacionado.</dd><br>
+          <dt>whatis …keyword</dt>
+          <dd><br>Exibe a descrição do que o programa faz.</dd><br>
+          <dt>mkbootdisk –device /dev/fd0 `uname -r`</dt>
+          <dd><br>Cria um disquete bootável.</dd><br>
+          <dt>gpg -c file1</dt>
+          <dd><br>Codifica um arquivo com o guarda de segurança do GNU.</dd><br>
+          <dt>gpg file1.gpg</dt>
+          <dd><br>Decodifica um arquivo com o guarda de segurança do GNU, informações do sistema Linux U.</dd><br>
+          <dt>wget -r www.example.com</dt>
+          <dd><br>Baixa um site inteiro.</dd><br>
+          <dt>wget -c www.example.com/file.iso</dt>
+          <dd><br>Baixa um arquivo com a possibilidade de parar o download e retomar mais tarde.</dd><br>
+          <dt>echo ‘wget -c www.example.com/files.iso‘ | at 09</dt>
+          <dd><br>Baixa um arquivo às 09 a.m</dd><br>
+          <dt>ldd /usr/bin/ssh</dt>
+          <dd><br>Exibe bibliotecas compartilhadas que são exigidas pelo programa ssh.</dd><br>
+          <dt>alias hh=’history’</dt>
+          <dd><br>Coloque um alias para um comando – hh = história.</dd><br>
+          <dt>chsh</dt>
+          <dd><br>Muda o Shell de comando.</dd><br>
+          <dt>chsh –list-shells</dt>
+          <dd><br>É um comando adequado para descobrir se você tem controle remoto em outro terminal.</dd><br>
+          <dt>clear</dt>
+          <dd><br>Limpa a tela do terminal.</dd><br>
+          <dt>umcomando > archivodesaida.txt 2>&1</dt>
+          <dd><br>Executa um comando e redireciona a saída para um arquivo, combinando entre ambos STDOUT e
+          STDERR.</dd><br>
+          <dt>umcomando | archivodesaida.txt 2> archivodeerros.txt</dt>
+          <dd><br>Executa um comando, você redirecionar a saída (STDOUT) para um arquivo e os erros (STDERR) para
+          outro.</dd><br>
+          <dt>umcomando | tee arquivodesaida.txt</dt>
+          <dd><br>Executa um comando, exibe a saída na tela e simultaneamente grava em um arquivo.</dd><br>
+          <br>
+          <br>
+        </section>
+      <footer>
+        <p>&copy; 2023 Curso de Linux. Feito por Alan Bezerra, Vytor Oliveira, Erik Kestring. Todos os direitos reservados.</p>
+      </footer> 
+    </main>
+  </body>
+</html>

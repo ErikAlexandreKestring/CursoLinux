@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso de Linux</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/your-font-awesome-kit.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      
+      <h1>Curso de Linux<ion-icon name="logo-tux"></ion-icon></h1>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html " class="active">Início</a></li>
+          <li><a href="vanta.html" class="nav-link px-2 text-white linkBtn">Vantagens do Linux</a></li>
+          <li><a href="comando1.html" class="nav-link px-2 text-white linkBtn">Comandos pt.1.</a></li>
+          <li><a href="comando2.html" class="nav-link px-2 text-white linkBtn">Comandos pt.2</a></li>
+          <li><a href="hospedagem.html" class="nav-link px-2 text-white linkBtn">Hospedagem</a></li>
+          <li><a href="contato.html" class="nav-link px-2 text-white linkBtn">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>.</h1>
+      <h1> Sobre o Apache</h1>
+      <p>O Apache é um servidor web de código aberto e oferecido gratuitamente pela Apache Software Foundation (ASF), responsável por seu desenvolvimento e manutenção. Sua principal funcionalidade é disponibilizar conteúdos presentes na internet, como um site, por exemplo, por meio da comunicação entre um servidor e um navegador.</p>
+      <p>O servidor Apache surgiu em 1995, como um projeto desenvolvido por Rob McCool na National Center of Supercomputing Applications (NCSA). Após deixar a empresa, McCool também deixou de trabalhar no software, então outras pessoas interessadas começaram a adaptar as funcionalidades do servidor às suas necessidades.</p>
+      <p>Entre as principais pessoas colaboradoras estavam Brian Behlendorf e Cliff Skolnick, que passaram a adicionar recursos e realizar correções no sistema, chamados de “patches”. Em pouco tempo, outras oito pessoas foram adicionadas ao projeto e então o grupo ficou conhecido como Grupo Apache.</p>        
+      <p>Em março de 1999 foi criada a Apache Software Foundation, uma organização sem fins lucrativos. A fundação é responsável não só por manter o servidor apache, mas também por orientar e incubar diversos outros projetos gratuitos de nível empresarial.</p>        
+      <p>Segundo as pessoas desenvolvedoras do servidor, o nome apache é uma referência a tribo de nativos americanos de mesmo nome, conhecidos por sua resistência e estratégias de combate. Dessa forma, a nomenclatura foi adotada em alusão a resistência da comunidade de software livre aos interesses do setor privado, bem como devido a estabilidade e versatilidade do servidor web.</p>
+      <h2>Como funciona um servidor Apache?</h2>
+      <p>De modo técnico, o que ocorre primeiramente é a obtenção do endereço de IP do site através de cache ou de servidor DNS (Domain Name System). O endereço IP  serve para localizar na internet onde está hospedado o site “petsfofos.com”. Em seguida, o navegador solicita a URL completa ao servidor.</p>
+      <p>Logo após, o servidor envia como resposta o conteúdo solicitado ou uma mensagem, que pode indicar a ocorrência de um erro, como o erro 404, retornado quando o conteúdo não é encontrado ou o erro 401, quando o acesso é negado. </p>        
+      <p>Toda essa comunicação entre máquina e servidor é realizada através do protocolo HTTP (Hypertext Transfer Protocol), um protocolo de transferência de dados; e assim o apache é responsável por facilitar a comunicação entre ambos os lados.</p>
+      <h2>Quais as vantagems do Apache?</h2>
+      <ul>
+      <li>Gratuito: um dos principais pontos fortes do apache é sua gratuidade, ou seja, não há necessidade de pagar licenças ou assinaturas para utilizá-lo;</li>
+      <li>Estabilidade: outro atributo do servidor é sua estabilidade durante a execução, dificilmente apresentando erros;</li>
+      <li>Personalização: o servidor apache é baseado em módulos, permitindo à pessoa desenvolvedora criar e adicionar diversos recursos extras;</li>
+      <li>Fácil configuração: o servidor web possui uma interface amigável, dessa forma até pessoas usuárias iniciantes podem usufruir de seus recursos sem dificuldade;</li>
+      <li>Atualizações frequentes: o Apache recebe atualizações frequentemente, o que mantém a segurança contra brechas no código e a compatibilidade com outras tecnologias;</li>
+      <li>Compatibilidade: o servidor apache possui compatibilidade tanto com o sistema Windows quanto com MacOS, Linux e Unix. Além disso, tem excelente integração com WordPress e suporte a linguagens PHP, Perl, Python e banco de dados MySQL;</li>  
+      <li>Variedade de recursos: mais um ponto positivo do apache são seus diversos recursos, como painel administrativo, mensagens de erro personalizadas, esquema de autenticação, entre outros. </li>
+      </ul>
+      <h2> E as desvantagens?</h2>
+      <p>Apesar da grande quantidade de vantagens, o servidor web apache também possui alguns pontos negativos. O principal deles consiste na perda de desempenho em casos de tráfego altíssimo na aplicação.</p>
+      <p>Além disso, outro ponto fraco reside em sua grande quantidade de opções de configurações. Dessa forma, é possível que a pessoa que esteja utilizando o servidor deixe passar algumas brechas de segurança geral no sistema.</p>
+      <h2>Quais os principais recursos do Apache?</h2>
+      <ul>
+      <li>Painel de controle: acesso ao servidor através de painel;</li>
+      <li>Segurança: o servidor apache permite o uso de autenticação, com usuário e senha válidos, e a especificação de restrições de acesso para cada endereço, pasta ou arquivo do servidor.</li>
+      <li>Personalização: além do apache permitir a pessoa utilizadora a criação e adição de recursos extras, também é possível customizar logs e mensagens de erros.</li>
+      <li>Host virtual e negociação de conteúdo: o servidor web possibilita a execução de duas ou mais páginas de modo simultâneo, além de permitir que essas páginas possam ser exibidas no idioma requisitado pelo navegador;</li>
+      <li>SMTP (Simple Mail Transfer Protocol): o servidor web é compatível com o envio de mensagens de correio eletrônico;</li>
+      <li>FTP (File Transfer Protocol): além de mensagens, o Apache também permite a transferência de arquivos e dados entre máquinas e acesso a sistemas de arquivos remotos.</li>
+      </ul>
+      <h2>Compatibilidades com Hardwares e Sistemas Operacionais</h2>
+      <p>O servidor web apache é um software multiplataforma. Isso significa que este servidor pode ser utilizado em diferentes sistemas operacionais, como o Windows, MacOS, Linux e Unix. Além disso, o Apache oferece compatibilidade com as linguagens de programação PHP, Perl e Python e o uso de criptografia SSL e TLS, que conferem aos sites uma camada de segurança.</p>
+      <p>Já se tratando de hardware, um computador com processador Pentium e 64 MB de memória RAM são suficientes para o seu funcionamento. Entretanto, é importante levar em consideração o tipo de aplicação que se deseja construir, pois diferentes aplicações podem exigir uma carga de processamento maior da máquina.</p>
+    </main>
+    <footer>
+      <p>&copy; 2023 Curso de Linux. Feito por Alan Bezerra, Vytor Oliveira, Erik Kestring. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
